@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import UlCard from "../UlCard";
 import { Card } from "react-bootstrap";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const urlApi = "https://swapi.dev/api/planets/?page=";
 const imgUbication = '../../assets/'
