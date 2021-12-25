@@ -1,4 +1,4 @@
-# Tipe Challenge - Frontend
+# Star Wars Challenge
 
 ## Objetivo:
 App creada con React e integrada con Redux, que usa la API de Star Wars (https://swapi.dev/documentation) para listar todos los planetas en una lista con un paginado de a 10 planetas. La lista de planetas permite guardar favoritos.
