@@ -1,17 +1,16 @@
-import CardPlanet from './components/CardPlanet';
+import Home from './pages/Home';
 import HeaderNavBar from './components/HeaderNavBar';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 function App() {
   return (
-    <div>
+    <div >
       <header>
         <HeaderNavBar/>
       </header>
 
-     <main >
-        <h1 className="mb-3 mt-4">Planetas de Star Wars</h1>
-       <CardPlanet/>
-     </main>
+     <Home/>
 
     </div>
   );

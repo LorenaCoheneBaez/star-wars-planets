@@ -7,6 +7,7 @@ import Nav from 'react-bootstrap/Nav'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const HeaderNavBar = () => {
+  
   return (
     <Navbar bg="dark" variant="dark">
       <Container>
