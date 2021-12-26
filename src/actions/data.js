@@ -1,19 +1,18 @@
-import { types } from "../types/types";
+import { types } from "../types/index";
 
 
-export const favouriteData = (planet) => {
-
+export const favouriteData = (name, climate, terrain, diameter) => {
   return (dispatch) => {
-
-    dispatch(data(planet))
-
+    dispatch(favoriteAdd(name, climate, terrain, diameter))
   }
-
 }
 
-export const data = (planetList) => ({
-  type: types.createData,
+export const favoriteAdd = (name, climate, terrain, diameter) => ({
+  type: types.addFavorite,
   payload: {
-    planetList
+    name,
+    climate,
+    terrain,
+    diameter
   }
 })

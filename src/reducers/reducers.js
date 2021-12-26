@@ -1,22 +1,18 @@
 import { types } from "../types/index";
 
-export const reducers = (state = {}, action) => {
+export const reducersFavorites = (state = {}, action) => {
 
 
   switch (action.type) {
-    case types.createData:
+        case types.addFavorite:
+console.log(action.payload)
 
-      return {
+return {
+  ...state,
+  favorites: [{ ...action.payload }]
+}
 
-        planetList: action.payload.planets,
-
-      }
-    case types.deleteData:
-
-      return {}
-
-    default:
-      return state;
-  }
+    default: return state
+}
 
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Navbar from 'react-bootstrap/Navbar'
 import Container from 'react-bootstrap/Container'
 import Form from 'react-bootstrap/Form'
@@ -22,11 +23,15 @@ const HeaderNavBar = () => {
           Star Wars
         </Navbar.Brand>
         <Nav.Item>
-          <Nav.Link eventKey="link-1" className='text-light'>Home</Nav.Link>
+          
+            <Nav.Link as={Link} to="/" eventKey="link-1" className='text-light'>Home</Nav.Link>
+          
         </Nav.Item>
+          
         <Nav.Item>
-          <Nav.Link eventKey="link-1" className='text-light'>Favoritos</Nav.Link>
+            <Nav.Link as={Link} to="/favorites" eventKey="link-1" className='text-light'>Favoritos</Nav.Link>
         </Nav.Item>
+         
         <Form className="d-flex">
           <Form.Control
             type="search"

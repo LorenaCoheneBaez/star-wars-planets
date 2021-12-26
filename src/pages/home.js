@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import useFetchHook from '../hooks/useFetchHook'
-//import { favouriteData } from "../actions/data"
+import { useDispatch } from 'react-redux'
+import { favoriteAdd } from "../actions/data"
 import PageNumber from '../components/PageNumber'
 import UlCard from "../components/CardList";
 import { Card } from "react-bootstrap";
@@ -13,6 +14,9 @@ import Pagination from 'react-bootstrap/Pagination'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Home = () => {
+
+  
+  //paginación
   const [number, setNumber] = useState(1)
 
     let urlApi = `https://swapi.dev/api/planets/?page=${number}`
@@ -21,7 +25,16 @@ const Home = () => {
 
     let pages = [1, 2, 3, 4, 5, 6]
 
+  //Favoritos
+
+  const dispatch = useDispatch()
+
+  const handleAddFavorite = () => {
+    dispatch(favoriteAdd())
+  }
+
   return (
+    
     <main>
       <div className='fondo'>
         <h1 className="mb-3 mt-4">Planetas de Star Wars</h1>
@@ -34,6 +47,7 @@ const Home = () => {
                     <Spinner animation="grow" variant='light' />
                   )
                   : (
+                    
               planetList.map((item, index) => {
                 return (
                   <Card style={{ width: "18rem" }} key={index + item.url} className="m-2 border border-white border-4 list">
@@ -47,7 +61,7 @@ const Home = () => {
                       /> 
                     </Card.Body>
                     <Card.Footer>
-                      <Button variant="outline-light text-white">
+                      <Button variant="outline-light text-white" onClick={handleAddFavorite}>
                         <i className="fas fa-heart"></i>
                       </Button>
                     </Card.Footer>

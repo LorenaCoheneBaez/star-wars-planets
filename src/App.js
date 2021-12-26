@@ -1,18 +1,22 @@
 import Home from './pages/Home';
+import Favourites from './pages/Favourites';
 import HeaderNavBar from './components/HeaderNavBar';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import { Provider } from "react-redux";
+import { store } from "./store";
 
 function App() {
   return (
-    <div >
-      <header>
-        <HeaderNavBar/>
-      </header>
-
-     <Home/>
-
-    </div>
+    <Provider store={store}>
+      <BrowserRouter>
+        <HeaderNavBar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/favorites" element={<Favourites />} />
+        </Routes>
+      </BrowserRouter>
+    </Provider>
   );
 }
 
