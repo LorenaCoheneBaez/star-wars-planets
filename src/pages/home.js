@@ -1,13 +1,10 @@
 import React, { useState } from 'react';
 import useFetchHook from '../hooks/useFetchHook'
-import { useDispatch } from 'react-redux'
-import { favoriteAdd } from "../actions/data"
 import PageNumber from '../components/PageNumber'
 import UlCard from "../components/CardList";
 import { Card } from "react-bootstrap";
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
-import Button from 'react-bootstrap/Button'
 import Spinner from 'react-bootstrap/Spinner'
 import Pagination from 'react-bootstrap/Pagination'
 
@@ -25,14 +22,7 @@ const Home = () => {
 
     let pages = [1, 2, 3, 4, 5, 6]
 
-  //Favoritos
-
-  const dispatch = useDispatch()
-
-  const handleAddFavorite = () => {
-    dispatch(favoriteAdd())
-  }
-
+  
   return (
     
     <main>
@@ -58,13 +48,9 @@ const Home = () => {
                         diameter={item.diameter}
                         climate={item.climate}
                         terrain={item.terrain}
+                        name={item.name}
                       /> 
                     </Card.Body>
-                    <Card.Footer>
-                      <Button variant="outline-light text-white" onClick={handleAddFavorite}>
-                        <i className="fas fa-heart"></i>
-                      </Button>
-                    </Card.Footer>
                   </Card>
                 );
               })

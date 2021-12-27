@@ -27,10 +27,6 @@ span:hover {
   font-weight: bolder;
 }
 
-i:hover {
-  color: black;
-}
-
 .navBarLink:hover {
   font-size: 1.25rem;
   text-decoration: underline;
@@ -38,4 +34,13 @@ i:hover {
 
 .links {
   font-family: "Russo One", sans-serif;
+}
+
+.favorite{
+  cursor:pointer;
+}
+
+.favorite:hover{
+  color: black;
+  text-decoration: underline;
 }
