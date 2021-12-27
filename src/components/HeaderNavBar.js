@@ -12,7 +12,7 @@ const HeaderNavBar = () => {
   return (
     <Navbar bg="dark" variant="dark">
       <Container>
-        <Navbar.Brand href="#home">
+        <Navbar.Brand as={Link} to="/" className='links' >
           <img
             alt="Star Wars Logo"
             src="/logo512.png"
@@ -24,12 +24,12 @@ const HeaderNavBar = () => {
         </Navbar.Brand>
         <Nav.Item>
           
-            <Nav.Link as={Link} to="/" eventKey="link-1" className='text-light'>Home</Nav.Link>
+          <Nav.Link as={Link} to="/" eventKey="link-1" className='text-light links navBarLink'>Home</Nav.Link>
           
         </Nav.Item>
           
         <Nav.Item>
-            <Nav.Link as={Link} to="/favorites" eventKey="link-1" className='text-light'>Favoritos</Nav.Link>
+          <Nav.Link as={Link} to="/favorites" eventKey="link-1" className='text-light links navBarLink'>Favoritos</Nav.Link>
         </Nav.Item>
          
         <Form className="d-flex">
