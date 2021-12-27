@@ -1,6 +1,6 @@
-import Home from './pages/Home';
+import Home from './pages/home';
 import HeaderNavBar from './components/HeaderNavBar';
-import Favourites from './pages/Favourites';
+import Favourites from './pages/favourites';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Provider } from "react-redux";
