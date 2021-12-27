@@ -36,4 +36,4 @@ App creada con React e integrada con Redux, que usa la API de Star Wars (https:/
 
 ### Rutas:
 - Home "http://localhost:3000/"
-- Favoritos "http://localhost:3000/favourites"
+- Favoritos "http://localhost:3000/favorites"
