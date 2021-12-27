@@ -2,8 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from 'react-bootstrap/Navbar'
 import Container from 'react-bootstrap/Container'
-import Form from 'react-bootstrap/Form'
-import Button from 'react-bootstrap/Button'
 import Nav from 'react-bootstrap/Nav'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -27,7 +25,11 @@ const HeaderNavBar = () => {
           <Nav.Link as={Link} to="/" eventKey="link-1" className='text-light links navBarLink'>Home</Nav.Link>
           
         </Nav.Item>
-          
+        <Nav.Item>
+
+          <Nav.Link as={Link} to="/favorites" eventKey="link-1" className='text-light links navBarLink'>Favoritos</Nav.Link>
+
+        </Nav.Item>
       </Container>
     </Navbar>
   );

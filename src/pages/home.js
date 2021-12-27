@@ -61,7 +61,7 @@ const Home = () => {
                 value={keyword}
                 onChange={handleInputChange}
                 type="search"
-                placeholder="Buscar un "
+                placeholder="Buscar un planeta"
                 className="me-1"
                 aria-label="Search"
               />
