@@ -1,61 +1,31 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { useSelector } from 'react-redux'
-import Container from 'react-bootstrap/Container'
-import Row from 'react-bootstrap/Row'
-import UlCard from "../components/CardList";
-import { Card } from "react-bootstrap";
+import CardFavorite from '../components/CardFavorite'
 
-function Favorites(planet,
-  FavPlanets,
-  state,
-  setFavouritesPlanets,
-  favouritesPlanets) {
-  //let urlApi = `https://swapi.dev/api/planets/1`
+function Favorites() {
 
-  //const { planetList } = useFetchHook(urlApi)
-  let localSave = JSON.parse(localStorage.getItem('favoritos'))
-  if (!localSave) {
-    localSave = []
-  }
-  //const [favouritesPlanets, setFavouritesPlanets] = useState(localSave.length)
-  const initialState = 0;
-  
-
-  //const myFavorites = JSON.parse(localStorage.getItem(favorites))
+  const { favorites } = useSelector(state => state.reducersFavorites)
 
   return (
-    <div>
-      <h1>Favoritos <i className="fas fa-heart text-white"></i></h1>
-      <Container >
-        {
-          localSave.map((item, index) =>
-            <Row lg={2} >
-              <h1>Hola</h1>
-              <Card style={{ width: "18rem" }}  className="m-2 border border-white border-4 list" initialState={initialState}
-                key={planet.id}
-                FavPlanets={localSave}
-                planet={planet}
-                setFavouritesPlanets={setFavouritesPlanets}
-                favouritesPlanets={favouritesPlanets}
-              >
+    <main>
+      <h2 className='page'> Favorites</h2>
+      <div class="container-card">
+        <div class="row">
+          {
+            favorites.map((item, index) =>
+              <CardFavorite key={index}
+                name={item.name}
+                diameter={item.diameter}
+                climate={item.climate}
+                terrain={item.terrain}
+              />
+            )
 
-                <Card.Body >
-                  <Card.Title><h3>{item.name}</h3></Card.Title>
-                  <UlCard
-                    diameter={item.diameter}
-                    climate={item.climate}
-                    terrain={item.terrain}
-                    name={item.name}
-                  />
-                </Card.Body>
-              </Card>
-            </Row>
-          )
+          }
+        </div>
+      </div>
 
-        }
-      </Container >
-
-    </div>
+    </main>
   )
 }
 
