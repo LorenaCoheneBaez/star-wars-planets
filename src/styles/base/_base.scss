@@ -33,15 +33,18 @@ span:hover {
   text-decoration: underline;
 }
 
-.links {
+.links, p {
   font-family: "Russo One", sans-serif;
 }
 
-.favorite {
-  cursor: pointer;
+.buttonFav{
+  background-color: #80808061;
+  border: 1px solid #80808061;
 }
 
-.favorite:hover {
+.buttonFav:hover {
+  background-color: #fff;
   color: black;
+  border: 1px solid black;
   text-decoration: underline;
 }

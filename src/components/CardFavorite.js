@@ -1,6 +1,12 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
 import { deleteFavorite } from '../actions/data'
+import { Card } from "react-bootstrap";
+import Button from 'react-bootstrap/Button'
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
+import ListGroup from 'react-bootstrap/ListGroup'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 function CardFavorite({ name, climate, terrain, diameter }) {
@@ -16,31 +22,29 @@ function CardFavorite({ name, climate, terrain, diameter }) {
 
 
   return (
-    <div>
-      <div className="col-md-4">
-        <div className="card">
-          <div className="product">
-            <img src={`/images/planets/${name}.png`} alt="" className="rounded"
-              width="160" />
-            <h5 className='name-planets'>
-              {name}
-            </h5>
-            {/*  card info */}
-            <div className='info'>
-              <p>Diameter: {diameter}</p>
-              <p>Climate: {climate}</p>
-              <p>Terrain: {terrain}</p>
-            </div>
-            {/* card info end  */}
-          </div>
-          {/* button for cards  */}
-          <div className="button-card cursor shoe" onClick={handleDeleteFavorite} >
-            <h3 className="text-uppercase-delete" >Delete to Favorite</h3>
-          </div>
-        </div>
-      </div>
-    </div>
+    <Container>
+      <Row lg={2} className='mt-4 d-flex justify-content-center'>
+        <Card style={{ width: "18rem" }}  className="m-2 border border-white border-4 list">
+
+          <Card.Body >
+            <Card.Title><h3>{name}</h3></Card.Title>
+            <ListGroup >
+              <ListGroup.Item className="list text-white fs-6">Diámetro: {diameter}</ListGroup.Item>
+              <ListGroup.Item className="list text-white fs-6">Clima: {climate}</ListGroup.Item>
+              <ListGroup.Item className="list text-white fs-6">Terreno: {terrain}</ListGroup.Item>
+              <ListGroup.Item className="list text-white fs-6 " >
+                <Button className='buttonFav' onClick={handleDeleteFavorite}>
+                  <i className="fas fa-trash"> Eliminar de favoritos</i>
+                </Button>
+                                    
+              </ListGroup.Item>
+            </ListGroup>
+          </Card.Body>
+        </Card>
+      </Row>
+    </Container>
   )
 }
+
 
 export default CardFavorite

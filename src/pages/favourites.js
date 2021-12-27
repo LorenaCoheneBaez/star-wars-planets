@@ -1,6 +1,8 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 import CardFavorite from '../components/CardFavorite'
+import { Link } from 'react-router-dom';
+import Nav from 'react-bootstrap/Nav'
 
 function Favorites() {
 
@@ -8,10 +10,13 @@ function Favorites() {
 
   return (
     <main>
-      <h2 className='page'> Favorites</h2>
+      <h1 className="mb-3 mt-4">Favoritos <i className="fas fa-heart"></i></h1>
       <div class="container-card">
         <div class="row">
           {
+            favorites.length !== 0 ?
+              (
+          
             favorites.map((item, index) =>
               <CardFavorite key={index}
                 name={item.name}
@@ -20,12 +25,25 @@ function Favorites() {
                 terrain={item.terrain}
               />
             )
+          
+              )
+              : (
+                <p className="alert alert-danger" role="alert">No hay favoritos guardados.</p>
 
+)
           }
         </div>
-      </div>
 
-    </main>
+        < Nav.Item >
+
+          <Nav.Link as={Link} to="/" eventKey="link-1" className='text-light links navBarLink'><i class="fas fa-arrow-circle-left"></i> Volver</Nav.Link>
+
+      </Nav.Item>
+      
+
+    </div>
+
+    </main >
   )
 }
 
