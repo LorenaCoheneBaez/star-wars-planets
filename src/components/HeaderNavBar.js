@@ -28,19 +28,6 @@ const HeaderNavBar = () => {
           
         </Nav.Item>
           
-        <Nav.Item>
-          <Nav.Link as={Link} to="/favorites" eventKey="link-1" className='text-light links navBarLink'>Favoritos</Nav.Link>
-        </Nav.Item>
-         
-        <Form className="d-flex">
-          <Form.Control
-            type="search"
-            placeholder="Buscar un nombre"
-            className="me-1"
-            aria-label="Search"
-          />
-          <Button variant="outline-light"><i className="fas fa-search"></i></Button>
-        </Form>
       </Container>
     </Navbar>
   );

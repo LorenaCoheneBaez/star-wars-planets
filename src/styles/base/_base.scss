@@ -10,7 +10,8 @@ body {
 }
 
 h1,
-h3 {
+h3,
+h4 {
   color: #fff;
   text-align: center;
   font-family: "Russo One", sans-serif;
@@ -36,11 +37,11 @@ span:hover {
   font-family: "Russo One", sans-serif;
 }
 
-.favorite{
-  cursor:pointer;
+.favorite {
+  cursor: pointer;
 }
 
-.favorite:hover{
+.favorite:hover {
   color: black;
   text-decoration: underline;
 }
