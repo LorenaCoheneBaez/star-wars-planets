@@ -1,6 +1,11 @@
 import { types } from "../types/index";
 
-export const reducersFavorites = (state = {}, action) => {
+const initialState = {
+  favorites: [],
+  //active: null
+}
+
+export const reducersFavorites = (state = initialState, action) => {
 
 
   switch (action.type) {

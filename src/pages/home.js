@@ -2,6 +2,7 @@ import React, { useState, useMemo } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import useFetchHook from '../hooks/useFetchHook'
 import useForm from '../hooks/useForm';
+import { Link } from 'react-router-dom';
 import PageNumber from '../components/PageNumber'
 import UlCard from "../components/CardList";
 import { Card } from "react-bootstrap";
@@ -11,6 +12,7 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Spinner from 'react-bootstrap/Spinner'
 import Pagination from 'react-bootstrap/Pagination'
+import Nav from 'react-bootstrap/Nav'
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -51,11 +53,11 @@ const Home = () => {
   return (
     
     <main>
-      <div className='fondo'>
+      <div className='fondo '>
         <h1 className="mb-3 mt-4">Planetas de Star Wars</h1>
         <React.Fragment>
-          
-            <Form onSubmit={handleSubmit} className="d-flex mb-4">
+          <Container >
+            <Form onSubmit={handleSubmit} className="d-flex  mb-4">
               <Form.Control
                 name="keyword"
                 value={keyword}
@@ -67,15 +69,15 @@ const Home = () => {
               />
               <Button type='submit' variant="outline-light"><i className="fas fa-search"></i></Button>
             </Form>
+          </Container>
             {
              planetFiltered.length !== 0 ?
                 (
-                <Container >
-            <div className="col-9">
+            <Container >
+                  <div className="d-flex justify-content-center">
 
-              <h4 className='mt-4'>Resultado de la búsqueda: </h4>
+              <h4 className='mt-4 me-4'>Resultado de la búsqueda: </h4>
               <hr />
-              <div className="row animate__animated animate__fadeIn">
                 {
                   planetFiltered.map((item, index) => (
                     <Card style={{ width: "18rem" }} key={index + item.url} className="m-2 border border-white border-4 list">
@@ -91,16 +93,22 @@ const Home = () => {
                       </Card.Body>
                     </Card>
                   ))
+
                 }
-              </div>
-            </div>
+                  </div>
+                    <Nav.Item>
+
+                    <Nav.Link as={Link} to="/" eventKey="link-1" className='text-light links navBarLink'><i class="fas fa-arrow-circle-left"></i> Volver</Nav.Link>
+
+                    </Nav.Item>
+            
           </Container>
 
               )
               : (
 
           <Container>
-            <Row lg={2} >
+                  <Row lg={2} className='mt-4 d-flex justify-content-center'>
               {
                 loadingSpinner ?
                   (
