@@ -98,7 +98,7 @@ const Home = () => {
                   </div>
                     <Nav.Item>
 
-                    <Nav.Link as={Link} to="/" eventKey="link-1" className='text-light links navBarLink'><i class="fas fa-arrow-circle-left"></i> Volver</Nav.Link>
+                    <Nav.Link as={Link} to="/" eventKey="link-1" className='text-light links navBarLink' onClick={keyword.replace('')}><i class="fas fa-arrow-circle-left"></i> Volver</Nav.Link>
 
                     </Nav.Item>
             
