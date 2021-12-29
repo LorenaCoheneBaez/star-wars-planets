@@ -15,6 +15,7 @@ import Pagination from 'react-bootstrap/Pagination'
 import Nav from 'react-bootstrap/Nav'
 
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Footer from '../components/Footer';
 
 const Home = () => {
   //paginación
@@ -52,7 +53,7 @@ const Home = () => {
   }
   
   return (
-    
+    <>
     <main>
       <div className='fondo '>
         <h1 className="mb-3 mt-4">Planetas de Star Wars</h1>
@@ -156,7 +157,8 @@ const Home = () => {
         </React.Fragment>
       </div>
     </main>
-
+    <Footer/>
+</>
   );
 
 }
