@@ -1,5 +1,8 @@
 # Star Wars Challenge
 
+<h2>Link de la página</h2>
+<a href="https://starwarsplanetschallenge.netlify.app/">Para ver el proyecto hacer click aquí</a>
+
 ## Objetivo:
 App creada con React e integrada con Redux, que usa la API de Star Wars (https://swapi.dev/documentation) para listar todos los planetas en una lista con un paginado de a 10 planetas. La lista de planetas permite guardar favoritos.
 
