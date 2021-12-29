@@ -11,8 +11,8 @@ function Favorites() {
   return (
     <main>
       <h1 className="mb-3 mt-4">Favoritos <i className="fas fa-heart"></i></h1>
-      <div class="container-card">
-        <div class="row">
+      <div className="container-card">
+        <div className="row">
           {
             favorites.length !== 0 ?
               (
@@ -36,7 +36,7 @@ function Favorites() {
 
         < Nav.Item >
 
-          <Nav.Link as={Link} to="/" eventKey="link-1" className='text-light links navBarLink'><i class="fas fa-arrow-circle-left"></i> Volver</Nav.Link>
+          <Nav.Link as={Link} to="/" eventKey="link-1" className='text-light links navBarLink'><i className="fas fa-arrow-circle-left"></i> Volver</Nav.Link>
 
       </Nav.Item>
       

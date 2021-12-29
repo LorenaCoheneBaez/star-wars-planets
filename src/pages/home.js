@@ -35,6 +35,7 @@ const Home = () => {
     keyword: searchParams.get('keyword')
   });
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const getSearch = (keyword = "") => {
     if (keyword === "") {
       return []
@@ -42,7 +43,7 @@ const Home = () => {
     return planetList.filter(planeta => planeta.name.toLowerCase().includes(keyword.toLowerCase()))
   }
 
-  const planetFiltered = useMemo(() => getSearch(searchParams.get('keyword')), [searchParams]);
+  const planetFiltered = useMemo(() => getSearch(searchParams.get('keyword')), [getSearch, searchParams]);
   
   const handleSubmit = e => {
     e.preventDefault();

@@ -18,7 +18,6 @@ const HeaderNavBar = () => {
             height="30"
             className="d-inline-block align-top"
           />{'  '}
-          Star Wars
         </Navbar.Brand>
         <Nav.Item>
           
