@@ -31,11 +31,25 @@ App creada con React e integrada con Redux, que usa la API de Star Wars (https:/
 #### Desde la terminal:
   
 <h4> Clonar el proyecto:</h4>
-<p>- <strong> git clone https://github.com/LorenaCoheneBaez/star-wars-planets.git </strong> </p>
-<p>- Ingresar a la carpeta del proyecto: <strong>cd star-wars-planets</strong> </p>
-<p>- Para instalar las dependencias correr: <strong>npm install</strong> </p>
 
-### Levantar el servidor del proyecto: npm start
+ ````
+ git clone https://github.com/LorenaCoheneBaez/star-wars-planets.git
+ ````
+ 
+- Ingresar a la carpeta del proyecto: 
+````
+cd star-wars-planets
+````
+- Para instalar las dependencias correr:
+````
+npm install
+````
+
+### Levantar el servidor del proyecto: 
+
+````
+npm start
+````
 
 ### Rutas:
 - Home "http://localhost:3000/"
