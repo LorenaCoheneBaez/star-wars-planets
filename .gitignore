@@ -11,6 +11,10 @@
 # production
 /build
 
+# Dependency directories
+jspm_packages/
+package-lock.json
+
 # misc
 .DS_Store
 .env.local
